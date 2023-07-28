@@ -1,13 +1,20 @@
-function getDiscount(purchase_amount) {
-    if (purchase_amount < 50) {
-        console.log(`Discounted Amount $${0} & Total Amount $${purchase_amount} + Discount Amount ${0}%`)
-    } else if (purchase_amount >= 50 && purchase_amount <= 100) {
-        console.log(`Discounted Amount $${purchase_amount*0.05} & Total Amount $${purchase_amount} + Discount Amount ${5}%`)
-    } else if (purchase_amount >= 100 && purchase_amount <= 200) {
-        console.log(`Discounted Amount $${purchase_amount*0.1} & Total Amount $${purchase_amount} + Discount Amount ${10}%`)
-    } else if (purchase_amount > 200) {
-        console.log(`Discounted Amount $${purchase_amount*0.15} & Total Amount $${purchase_amount} + Discount Amount ${15}%`)
+function getDiscount(purchaseAmount) {
+    let discountPercentage;
+
+    if(purchaseAmount >= 200){
+        discountPercentage = 0.15;
+    } else if(purchaseAmount >= 100){
+        discountPercentage = 0.10;
+    } else if(purchaseAmount >= 50){
+        discountPercentage = 0.05;
+    } else{
+        discountPercentage = 0;
     }
+
+    const discountAmount = purchaseAmount * discountPercentage;
+    const totalAmount = purchaseAmount - discountAmount;
+
+    console.log(`Discounted amount $${discountAmount} & Total Amount $${totalAmount} + Discount amount ${discountPercentage*100}%`);
 }
 
 let purchase_amount = 150;

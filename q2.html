@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body style="display: flex; align-content: center; justify-content: center">
+    <div>
+        <h1>0</h1>
+        <button onclick="increment()">Increment+</button>
+    </div>
+
+    <script>
+        function increment() {
+            const h1 = document.querySelector('h1');
+            let count = Number.parseInt(h1.innerText);
+            count++;
+            h1.innerText = count.toString();
+        }
+    </script>
+</body>
+</html>

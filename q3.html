@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body style="display: flex; align-content: center; justify-content: center">
+    <div>
+        <img src="./img/image1.png" height="360">
+        <br>
+        <div style="display: flex; justify-content: center">
+            <button onclick="toNode()">Node JS</button>
+            <button onclick="toReact()">React JS</button>
+        </div>
+    </div>
+
+    <script>
+        const img = document.querySelector('img');
+        function toNode() {
+            img.src = './img/image1.png';
+        }
+
+        function toReact() {
+            img.src = './img/image2.png';
+        }
+    </script>
+</body>
+</html>

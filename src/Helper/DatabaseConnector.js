@@ -5,7 +5,7 @@ dotenv.config({
 const mongoose = require('mongoose');
 
 exports.connectDB = async (req, res) => {
-    const db_url = "mongodb://" + process.env.DB_URL + ":" + process.env.DB_PORT;
+    const db_url = "mongodb://localhost:27017";
     console.log(db_url);
     try {
         mongoose.connect(db_url);

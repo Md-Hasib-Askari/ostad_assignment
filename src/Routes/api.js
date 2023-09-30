@@ -1,39 +1,32 @@
 const router = require('express').Router();
 
-const blogController = require('../Controllers/blogController')
-const commentController = require('../Controllers/commentController')
-const messageController = require('../Controllers/messageController')
-const portfolioController = require('../Controllers/portfolioController')
-const productController = require('../Controllers/productController')
+const adminController = require('../Controllers/adminController')
+const subAdminController = require('../Controllers/subAdminController')
+const userController = require('../Controllers/userController')
+const postController = require('../Controllers/postController')
 
-// Blog Routes
-router.get('/blog/create', blogController.create);
-router.get('/blog/read', blogController.read);
-router.get('/blog/update', blogController.update);
-router.get('/blog/delete', blogController.delete);
+// Admin Routes
+router.get('/admin/create', adminController.create);
+router.get('/admin/read', adminController.read);
+router.get('/admin/update', adminController.update);
+router.get('/admin/delete', adminController.delete);
 
-// Comment Routes
-router.get('/comment/create', commentController.create);
-router.get('/comment/read', commentController.read);
-router.get('/comment/update', commentController.update);
-router.get('/comment/delete', commentController.delete);
+// Sub Admin Routes
+router.get('/sub-admin/create', subAdminController.create);
+router.get('/sub-admin/read', subAdminController.read);
+router.get('/sub-admin/update', subAdminController.update);
+router.get('/sub-admin/delete', subAdminController.delete);
 
-// Message Routes
-router.get('/message/create', messageController.create);
-router.get('/message/read', messageController.read);
-router.get('/message/update', messageController.update);
-router.get('/message/delete', messageController.delete);
+// User Routes
+router.get('/user/create', userController.create);
+router.get('/user/read', userController.read);
+router.get('/user/update', userController.update);
+router.get('/user/delete', userController.delete);
 
-// Portfolio Routes
-router.get('/portfolio/create', portfolioController.create);
-router.get('/portfolio/read', portfolioController.read);
-router.get('/portfolio/update', portfolioController.update);
-router.get('/portfolio/delete', portfolioController.delete);
-
-// Product Routes
-router.get('/product/create', productController.create);
-router.get('/product/read', productController.read);
-router.get('/product/update', productController.update);
-router.get('/product/delete', productController.delete);
+// Post Routes
+router.get('/post/create', postController.create);
+router.get('/post/read', postController.read);
+router.get('/post/update', postController.update);
+router.get('/post/delete', postController.delete);
 
 module.exports = router;

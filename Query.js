@@ -1,4 +1,4 @@
-"use test_db" // Created Database named "test_db"
+use('test_db'); // Created Database named "test_db"
 
 db.createCollection('testCollection1'); // Created Collection named "testCollection1"
 db.createCollection('testCollection2'); // Created Collection named "testCollection2"

@@ -1,10 +1,10 @@
-const testModel = require('../Models/Models');
+const StudentController = require('../Models/StudentsModel');
 
 // Create
-exports.CreateTest = async (req, res) => {
+exports.registration = async (req, res) => {
     try {
         const reqBody = req.body;
-        await testModel.create(reqBody);
+        await StudentController.create(reqBody);
         res.status(201).json({status:"success",data: reqBody});
     } catch (err) {
         res.status(400).json({status:"fail", data:err});
@@ -12,9 +12,9 @@ exports.CreateTest = async (req, res) => {
 }
 
 // Read
-exports.ReadTest = async (req,res) => {
+exports.readStudent = async (req,res) => {
     try {
-        let data = await testModel.find();
+        let data = await StudentController.find();
         res.status(200).json({status:"success", data:data})
     } catch (err) {
         res.status(400).json({status:"fail", data:err})
@@ -22,11 +22,11 @@ exports.ReadTest = async (req,res) => {
 }
 
 // Read By ID
-exports.ReadTestByID = async (req,res) => {
+exports.readStudentByID = async (req,res) => {
     let id = req.params.id;
     let query = {_id:id};
     try {
-        let data = await testModel.find(query);
+        let data = await StudentController.find(query);
         res.status(200).json({status:"success", data:data})
     } catch (err) {
         res.status(400).json({status:"fail", data:err})
@@ -35,12 +35,12 @@ exports.ReadTestByID = async (req,res) => {
 
 
 // Update
-exports.UpdateTest = async (req,res) => {
+exports.updateStudent = async (req,res) => {
     let id= req.params.id;
     let query={_id:id};
     let reqBody = req.body;
     try {
-        let data = await testModel.updateOne(query,reqBody);
+        let data = await StudentController.updateOne(query,reqBody);
         res.status(200).json({status:"success", data:data});
     } catch (err) {
         res.status(400).json({status:"fail", data:err});
@@ -49,11 +49,11 @@ exports.UpdateTest = async (req,res) => {
 
 
 // Delete
-exports.DeleteTest = async (req,res) => {
+exports.deleteStudent = async (req,res) => {
     let id= req.params.id;
     let query={_id:id};
     try {
-        let data = await testModel.deleteOne(query);
+        let data = await StudentController.deleteOne(query);
         res.status(200).json({status:"success",data:data})
     } catch (err) {
         res.status(400).json({status:"fail", data:err});

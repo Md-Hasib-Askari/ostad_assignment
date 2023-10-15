@@ -13,7 +13,7 @@ const StudentSchema = new mongoose.Schema({
     },
     address : String,
     roll : String,
-    class : String,
+    _class : String,
 }, {timestamps: true, versionKey: false});
 
 const StudentsModel = mongoose.model('students', StudentSchema);

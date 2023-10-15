@@ -1,17 +1,8 @@
 const router = require('express').Router();
-const OTPController = require("../controllers/OTPController");
+const StudentController = require("../controllers/StudentController");
 
-// Create
-router.post("/createOTP", OTPController.createOTP);
-
-// Read
-router.get("/getOTPs", OTPController.getAllOTPs);
-router.get("/getOTPs/:id", OTPController.getOTPByID);
-
-// Update
-router.post("/updateOTP/:id", OTPController.updateOTP);
-
-// Delete
-router.get("/deleteOTP/:id", OTPController.deleteOTP);
+router.get("/RecoverVerifyEmail/:email",StudentController.RecoverVerifyEmail);
+router.get("/RecoverVerifyOTP/:email/:otp",StudentController.RecoverVerifyOTP);
+router.post("/RecoverResetPass",StudentController.RecoverResetPass);
 
 module.exports=router;

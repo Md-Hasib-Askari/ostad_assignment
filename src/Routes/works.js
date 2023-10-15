@@ -6,10 +6,10 @@ router.post("/createWork", WorkController.createWork);
 
 // Read
 router.get("/getWorks", WorkController.getAllWorks);
-router.get("/getWorks/:id", WorkController.getWorkByID);
+router.get("/getWorks/:status", WorkController.getWorkByStatus);
 
 // Update
-router.post("/updateWork/:id", WorkController.updateWork);
+router.post("/updateWork/:id/:status", WorkController.updateWork);
 
 // Delete
 router.get("/deleteWork/:id", WorkController.deleteWork);

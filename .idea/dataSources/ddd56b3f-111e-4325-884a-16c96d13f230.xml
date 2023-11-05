@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.48">
+    <root id="1">
+      <ServerVersion>6.0.5</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="config"/>
+    <schema id="4" parent="1" name="local"/>
+    <schema id="5" parent="1" name="nms_db"/>
+    <schema id="6" parent="1" name="sms"/>
+    <schema id="7" parent="1" name="todos"/>
+    <schema id="8" parent="1" name="test_db"/>
+    <table id="9" parent="8" name="testCollection1"/>
+    <column id="10" parent="9" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="11" parent="9" name="manufacturer">
+      <DasType>String|12s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="12" parent="9" name="price">
+      <DasType>Int32|4s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="13" parent="9" name="title">
+      <DasType>String|12s</DasType>
+      <Position>4</Position>
+    </column>
+  </database-model>
+</dataSource>

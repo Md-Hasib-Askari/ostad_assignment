@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Footer(props) {
+function Footer() {
     const footerMenu = ["About", "Premium", "Campaigns", "Blog", "Affiliate Program", "FAQs", "Contact"];
     return (
         <footer className="p-4 bg-slate-300 md:p-8 lg:p-10 dark:bg-gray-800">

@@ -1,5 +1,4 @@
 import React from 'react';
-import {PiPaperPlaneRightDuotone} from "react-icons/pi";
 import PricingListItem from "./PricingListItem.jsx";
 
 function PricingCard({title, description, rate, listItems}) {

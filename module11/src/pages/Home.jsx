@@ -1,9 +1,7 @@
-import Navbar from "../components/Navbar.jsx";
-import Footer from "../components/Footer.jsx";
 import Hero from "../components/Home/Hero.jsx";
 import FeaturedContent from "../components/Home/FeaturedContent.jsx";
 import SocialProof from "../components/Home/SocialProof.jsx";
-import NewsLetter from "../NewsLetter.jsx";
+import NewsLetter from "../components/NewsLetter.jsx";
 import React from "react";
 
 function Home() {

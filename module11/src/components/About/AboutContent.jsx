@@ -1,6 +1,6 @@
 import React from 'react';
 
-function AboutContent(props) {
+function AboutContent() {
     return (
         <section className="bg-slate-200 dark:bg-gray-800">
             <div

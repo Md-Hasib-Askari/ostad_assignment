@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderBanner from "../components/HeaderBanner.jsx";
 import BlogTemplate from "../components/Blog/BlogTemplate.jsx";
-import NewsLetter from "../NewsLetter.jsx";
+import NewsLetter from "../components/NewsLetter.jsx";
 import RelatedArticles from "../components/Blog/RelatedArticles.jsx";
 
 function Blog(props) {

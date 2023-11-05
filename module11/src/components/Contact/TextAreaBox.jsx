@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TextAreaBox(props) {
+function TextAreaBox() {
     return (
         <div className="sm:col-span-2">
             <label htmlFor="message"

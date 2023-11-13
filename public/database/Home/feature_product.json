@@ -1,0 +1,27 @@
+[
+  {
+    "imgUrl" : "./assets/Home/project1.png",
+    "subtitle" : "App Design - June 20, 2022",
+    "title" : "App Redesign"
+  },
+  {
+    "imgUrl" : "./assets/Home/project2.png",
+    "subtitle" : "App Design - June 20, 2022",
+    "title" : "Redesign channel website landing page"
+  },
+  {
+    "imgUrl" : "./assets/Home/project3.png",
+    "subtitle" : "App Design - June 20, 2022",
+    "title" : "Redesign channel website landing page"
+  },
+  {
+    "imgUrl" : "./assets/Home/project4.png",
+    "subtitle" : "App Design - June 20, 2022",
+    "title" : "Redesign channel website landing page"
+  },
+  {
+    "imgUrl" : "./assets/Home/project5.png",
+    "subtitle" : "App Design - June 20, 2022",
+    "title" : "Redesign channel website landing page"
+  }
+]

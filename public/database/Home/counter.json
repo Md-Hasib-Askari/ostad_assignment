@@ -1,0 +1,22 @@
+[
+  {
+    "imgUrl" : "./assets/Home/stat1.svg",
+    "count": 240452,
+    "title": "Followers"
+  },
+  {
+    "imgUrl" : "./assets/Home/stat2.svg",
+    "count": 6300,
+    "title": "Solved Problems"
+  },
+  {
+    "imgUrl" : "./assets/Home/stat3.svg",
+    "count": 25000,
+    "title": "Happy Customers"
+  },
+  {
+    "imgUrl" : "./assets/Home/stat4.svg",
+    "count": 360452,
+    "title": "Projects"
+  }
+]

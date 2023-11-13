@@ -1,0 +1,14 @@
+[
+  {
+    "imgUrl" : "./assets/Team/team1.png",
+    "name" : "Devon Lane"
+  },
+  {
+    "imgUrl" : "./assets/Team/team2.png",
+    "name" : "Danny Bailey"
+  },
+  {
+    "imgUrl" : "./assets/Team/team3.png",
+    "name" : "Alex Lov"
+  }
+]

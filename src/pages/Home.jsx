@@ -9,7 +9,9 @@ const Home = () => {
     return (
         <div>
             <div className="bg-secondary">
-                <Navbar />
+                <div className="md:px-5">
+                    <Navbar />
+                </div>
                 <Hero />
                 <Partner />
             </div>

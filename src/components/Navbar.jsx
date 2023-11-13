@@ -30,7 +30,7 @@ const Navbar = () => {
     };
     return (
         <nav
-            className="bg-transparent md:px-5 dark:bg-gray-900 w-full">
+            className="bg-transparent dark:bg-gray-900 w-full">
             <div className="max-w-screen-xl flex flex-col md:flex-row items-center justify-between mx-auto py-8">
                 <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span

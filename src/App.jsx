@@ -10,7 +10,7 @@ import Newsletter from "./components/Newsletter.jsx";
 const App = () => {
     return (
         <div className="font-sans">
-            <BrowserRouter>
+            <BrowserRouter basename="/ostad_assignment/">
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/team' element={<Team />} />

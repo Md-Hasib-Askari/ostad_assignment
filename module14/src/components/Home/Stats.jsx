@@ -14,7 +14,7 @@ const Stats = () => {
             }
         }
         fetchData();
-    })
+    }, []);
     return (
         <div className="w-full py-4 my-5">
             <div className="max-w-screen-xl mx-auto flex flex-wrap gap-5 justify-center lg:justify-between lg:p-5">

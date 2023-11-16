@@ -1,7 +1,9 @@
+import {LazyLoadImage} from "react-lazy-load-image-component";
+
 const TestimonialCard = ({imgUrl, description, name, position}) => {
     return (
         <div className="flex flex-col space-y-5 shadow-xl p-8 rounded-2xl">
-            <img className="w-1/2 mx-auto" src={imgUrl} alt=""/>
+            <LazyLoadImage className="w-1/2 mx-auto" src={imgUrl} alt=""/>
             <p className="text-center text-gray-500 text-sm md:text-md">
                 {description}
             </p>

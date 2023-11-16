@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {BsArrowRight} from "react-icons/bs";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 const WorkList = () => {
     const [workList, setJsonData] = useState([]);
@@ -29,7 +30,7 @@ const WorkList = () => {
                         <div key={index}>
                             <div
                                 className="flex justify-center items-center mb-4 w-10 h-10 rounded-lg bg-secondary lg:h-16 lg:w-16">
-                                <img className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6" src={work['imgUrl']} alt=""/>
+                                <LazyLoadImage className="w-5 h-5 text-primary-600 lg:w-6 lg:h-6" src={work['imgUrl']} alt=""/>
                             </div>
                             <h3 className="mb-2 text-xl font-bold dark:text-white">{work['title']}</h3>
                             <p className="text-gray-500 dark:text-gray-400 mb-6 max-w-sm">

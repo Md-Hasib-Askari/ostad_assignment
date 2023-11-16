@@ -1,3 +1,5 @@
+import {LazyLoadImage} from "react-lazy-load-image-component"
+
 const Hero = () => {
     return (
         <section className="bg-transparent px-5">
@@ -16,12 +18,16 @@ const Hero = () => {
                 </div>
                 <div className="hidden lg:mt-0 max-w-2xl lg:flex sm:flex-col gap-5">
                     <div className='flex justify-between'>
-                        <img className='max-w-md' src="./assets/Home/hero1.png" alt="mockup" />
-                        <img className='w-1/4' src="./assets/Home/hero2.png" alt="mockup" />
+                        <LazyLoadImage className='max-w-md' src="./assets/Home/hero1.png" alt="mockup" />
+                        <LazyLoadImage className='w-1/4' src="./assets/Home/hero2.png" alt="mockup" />
+                        {/*<img className='max-w-md' src="./assets/Home/hero1.png" alt="mockup" />*/}
+                        {/*<img className='w-1/4' src="./assets/Home/hero2.png" alt="mockup" />*/}
                     </div>
                     <div className='flex justify-between'>
-                        <img className='w-1/4' src="./assets/Home/hero3.png" alt="mockup" />
-                        <img className='max-w-md' src="./assets/Home/hero4.png" alt="mockup" />
+                        <LazyLoadImage className='w-1/4' src="./assets/Home/hero3.png" alt="mockup" />
+                        <LazyLoadImage className='max-w-md' src="./assets/Home/hero4.png" alt="mockup" />
+                        {/*<img className='max-w-md' src="./assets/Home/hero3.png" alt="mockup" />*/}
+                        {/*<img className='w-1/4' src="./assets/Home/hero4.png" alt="mockup" />*/}
                     </div>
                 </div>
             </div>

@@ -1,3 +1,5 @@
+import {LazyLoadImage} from "react-lazy-load-image-component";
+
 const ServiceCard = ({title, description, imgUrl}) => {
     return (
         <div className="flex flex-col space-y-5 shadow-xl p-8 rounded-2xl">
@@ -9,12 +11,12 @@ const ServiceCard = ({title, description, imgUrl}) => {
             </p>
             <div className="grid grid-rows-2">
                 <div className="flex">
-                    <img className="w-2/3" src={imgUrl[0]} alt=""/>
-                    <img className="w-1/3" src={imgUrl[1]} alt=""/>
+                    <LazyLoadImage className="w-2/3" src={imgUrl[0]} alt=""/>
+                    <LazyLoadImage className="w-1/3" src={imgUrl[1]} alt=""/>
                 </div>
                 <div className="grid grid-cols-2">
-                    <img src={imgUrl[2]} alt=""/>
-                    <img src={imgUrl[3]} alt=""/>
+                    <LazyLoadImage src={imgUrl[2]} alt=""/>
+                    <LazyLoadImage src={imgUrl[3]} alt=""/>
                 </div>
             </div>
         </div>

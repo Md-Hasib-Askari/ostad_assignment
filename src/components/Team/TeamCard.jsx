@@ -1,4 +1,5 @@
 import {FaFacebook, FaInstagram, FaXTwitter} from "react-icons/fa6";
+import {LazyLoadImage} from "react-lazy-load-image-component";
 
 const TeamCard = ({imgUrl, name}) => {
     return (
@@ -12,7 +13,7 @@ const TeamCard = ({imgUrl, name}) => {
                         <FaInstagram className="w-10 h-10 p-2 text-gray-500 hover:transform hover:scale-125 cursor-pointer"/>
                     </div>
                 </div>
-                <img className="rounded-t-lg" src={imgUrl} alt=""/>
+                <LazyLoadImage className="rounded-t-lg" src={imgUrl} alt=""/>
             </div>
             <div className="p-5">
                 <a href="#">

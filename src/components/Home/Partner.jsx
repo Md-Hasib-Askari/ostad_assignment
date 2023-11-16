@@ -1,3 +1,5 @@
+import {LazyLoadImage} from "react-lazy-load-image-component";
+
 const Partner = () => {
     return (
         <section className="bg-transparent dark:bg-gray-900 pb-10 overflow-x-hidden">
@@ -6,20 +8,20 @@ const Partner = () => {
                     <div
                         className="flex flex-wrap gap-5 justify-center md:justify-between text-gray-500 dark:text-gray-400">
                         <a href="#" className="flex justify-center items-center">
-                            <img width='100px' src="./assets/Home/partner1.svg" alt=""/>
+                            <LazyLoadImage width='100px' src="./assets/Home/partner1.svg" alt=""/>
                         </a>
                         <a href="#" className="flex justify-center items-center">
-                            <img width='100px' src="./assets/Home/partner2.png" alt=""/>
+                            <LazyLoadImage width='100px' src="./assets/Home/partner2.png" alt=""/>
                         </a>
                         <a href="#" className="flex justify-center items-center">
-                            <img width='100px' src="./assets/Home/partner3.svg" alt=""/>
+                            <LazyLoadImage width='100px' src="./assets/Home/partner3.svg" alt=""/>
                         </a>
 
                         <a href="#" className="flex justify-center items-center">
-                            <img width='100px' src="./assets/Home/partner4.png" alt=""/>
+                            <LazyLoadImage width='100px' src="./assets/Home/partner4.png" alt=""/>
                         </a>
                         <a href="#" className="flex justify-center items-center">
-                            <img width='100px' src="./assets/Home/partner5.png" alt=""/>
+                            <LazyLoadImage width='100px' src="./assets/Home/partner5.png" alt=""/>
                         </a>
                     </div>
                 </div>

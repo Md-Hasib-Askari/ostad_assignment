@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6d26a99d-362c-4288-884a-f8c6101aca14" name="Changes" comment="Module 15 Assignment (Done)">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.eslintrc.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/postcss.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/vite.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/api/fetchAPI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/Navbar.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/main.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/StudentForm.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/StudentList.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/tailwind.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/backend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controllers/Controller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Controllers/ModelController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Controllers/StudentController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Helper/welcome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Middlewares/demo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Models/Models.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Models/StudentModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Routes/Route.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/Routes/Route.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Templates/index.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b1c7c622-c71a-4f18-85aa-9455e8530b53" />
+        <option name="url" value="https://github.com/Md-Hasib-Askari/ostad_assignment.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2VDBjTJZaqYU5hauXzMPE3aqDjS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "module15",
+    "javascript.nodejs.core.library.configured.version": "18.16.0",
+    "javascript.nodejs.core.library.typings.version": "18.16.0",
+    "last_opened_file_path": "F:/MERN/ostad_assignment",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editing.templates",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2023.1.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
+    ]
+  }
+}]]></component>
+  <component name="ReactDesignerToolWindowState">
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.rcb.reactComponents" value="false" />
+        <entry key="com.haulmont.rcb.reactInspector" value="false" />
+        <entry key="com.haulmont.rcb.storybook" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\MERN\ostad_assignment\module11\src\components\Home" />
+      <recent name="F:\MERN\ostad_assignment\module11\src\components\Project" />
+      <recent name="F:\MERN\ostad_assignment\module11\src\assets\images" />
+      <recent name="F:\MERN\ostad_assignment\module11\src\pages" />
+      <recent name="F:\MERN\ostad_assignment\module11\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\MERN\ostad_assignment" />
+      <recent name="F:\MERN\ostad_assignment\module11\src\components" />
+      <recent name="F:\MERN\ostad_assignment\module11\src" />
+      <recent name="F:\MERN\ostad_assignment\module11\public\images" />
+      <recent name="F:\MERN\ostad_assignment\module11\src\components\Home" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.backend">
+    <configuration name="backend" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/backend/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="frontend" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/frontend/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="npm.backend" />
+      <item itemvalue="npm.frontend" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6d26a99d-362c-4288-884a-f8c6101aca14" name="Changes" comment="" />
+      <created>1694360906445</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694360906445</updated>
+      <workItem from="1694360908327" duration="4475000" />
+      <workItem from="1694492630215" duration="86000" />
+      <workItem from="1694532263963" duration="3264000" />
+      <workItem from="1696078155469" duration="1033000" />
+      <workItem from="1696079210092" duration="3337000" />
+      <workItem from="1696247206797" duration="680000" />
+      <workItem from="1697303008751" duration="2220000" />
+      <workItem from="1697355758112" duration="13380000" />
+      <workItem from="1697545812400" duration="9000" />
+      <workItem from="1699102528706" duration="2970000" />
+      <workItem from="1699105541888" duration="9036000" />
+      <workItem from="1699189246566" duration="23602000" />
+      <workItem from="1699267661728" duration="7000" />
+      <workItem from="1699374129872" duration="229000" />
+      <workItem from="1699462532661" duration="41000" />
+      <workItem from="1700925361707" duration="247000" />
+      <workItem from="1700925611963" duration="841000" />
+      <workItem from="1700926803878" duration="14746000" />
+      <workItem from="1700974556007" duration="354000" />
+      <workItem from="1700975137659" duration="15892000" />
+    </task>
+    <task id="LOCAL-00001" summary="Module 7 Assignment">
+      <created>1694534101460</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1694534101460</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Module 7 Assignment">
+      <created>1694535033481</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694535033481</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Module 9 Assignment">
+      <created>1696081503450</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696081503450</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Module 9 Assignment">
+      <created>1696081760283</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696081760283</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Module 9 Assignment">
+      <created>1696247258287</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696247258287</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Module 10 Assignment (Student CRUD)">
+      <created>1697367446206</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697367446207</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Module 10 Assignment (Done)">
+      <created>1697389366528</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697389366528</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Module 14 Assignment (Done)">
+      <created>1699214063575</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699214063575</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Module 14 Assignment (Done)">
+      <created>1699214269660</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699214269660</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Module 14 Assignment (Done)">
+      <created>1699214463209</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699214463209</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Module 14 Assignment (Done)">
+      <created>1699374348044</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1699374348044</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.env" />
+    <option featureType="com.intellij.fileTypeFactory" implementationName="package.json" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="5c9bf951-e965-4e31-ba7d-bd68cadf1183" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="5c9bf951-e965-4e31-ba7d-bd68cadf1183">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="module7" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Module 7 Assignment" />
+    <MESSAGE value="Module 9 Assignment" />
+    <MESSAGE value="Module 10 Assignment (Student CRUD)" />
+    <MESSAGE value="Module 10 Assignment (Done)" />
+    <MESSAGE value="Module 14 Assignment (Done)" />
+    <MESSAGE value="Module 15 Assignment (Done)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Module 15 Assignment (Done)" />
+  </component>
+</project>

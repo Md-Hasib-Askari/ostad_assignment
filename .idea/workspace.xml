@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d26a99d-362c-4288-884a-f8c6101aca14" name="Changes" comment="Module 15 Assignment (Done)">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/StudentUpdateForm.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/StudentForm.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/StudentForm.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/StudentList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/StudentList.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +66,7 @@
     "git-widget-placeholder": "module15",
     "javascript.nodejs.core.library.configured.version": "18.16.0",
     "javascript.nodejs.core.library.typings.version": "18.16.0",
-    "last_opened_file_path": "F:/MERN/ostad_assignment",
+    "last_opened_file_path": "F:/MERN/demo/frontend/src/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,11 +93,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\MERN\demo\frontend\src\pages" />
       <recent name="F:\MERN\ostad_assignment\module11\src\components\Home" />
       <recent name="F:\MERN\ostad_assignment\module11\src\components\Project" />
       <recent name="F:\MERN\ostad_assignment\module11\src\assets\images" />
       <recent name="F:\MERN\ostad_assignment\module11\src\pages" />
-      <recent name="F:\MERN\ostad_assignment\module11\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\MERN\ostad_assignment" />
@@ -104,7 +107,7 @@
       <recent name="F:\MERN\ostad_assignment\module11\src\components\Home" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.backend">
     <configuration name="backend" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/backend/package.json" />
       <command value="start" />

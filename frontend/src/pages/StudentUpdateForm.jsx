@@ -1,10 +1,11 @@
 import {useEffect, useState} from "react";
 import {toast, Toaster} from "react-hot-toast";
-import {addStudent} from "../api/fetchAPI.js";
-import {useNavigate} from "react-router-dom";
+import {addStudent, getStudentByID, updateStudent} from "../api/fetchAPI.js";
+import {useLocation, useNavigate} from "react-router-dom";
 
-const StudentForm = () => {
+const StudentUpdateForm = () => {
     const navigate = useNavigate();
+    const {state} = useLocation();
 
     const [formData, setFormData] = useState({
         "firstName": "",
@@ -17,8 +18,23 @@ const StudentForm = () => {
         "phone": "",
         "admissionDate": "",
         "courses": []
-    });
+    })
     const [selectedCourses, setSelectedCourses] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            if (state){
+                const {data} = await getStudentByID(state._id);
+                data.data[0] = {
+                    ...data.data[0],
+                    admissionDate: new Date(data.data[0].admissionDate).toISOString().split('T')[0],
+                    dateOfBirth: new Date(data.data[0].dateOfBirth).toISOString().split('T')[0],
+                };
+                setFormData(data.data[0]);
+                setSelectedCourses(data.data[0].courses);
+            }
+        })()
+    }, []);
 
     const handleCheckboxChange = (e) => {
         const { value } = e.target;
@@ -52,11 +68,11 @@ const StudentForm = () => {
         }
         console.log(formData)
         if (isValid) {
-            toast("Student added successfully", {
+            toast("Student updated successfully", {
                 icon: '👏',
                 position: 'top-center',
             })
-            addStudent(formData).then(r => {
+            updateStudent(formData._id, formData).then(r => {
                 console.log(r);
                 if (r.status === 'success') {
                     navigate('/');
@@ -79,7 +95,7 @@ const StudentForm = () => {
         <section className="max-w-screen-xl mx-auto">
             <div><Toaster/></div>
             <div className="py-8 px-4 mx-auto max-w-2xl lg:py-16">
-                <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Add a new student</h2>
+                <h2 className="mb-4 text-xl font-bold text-gray-900 dark:text-white">Update existing student</h2>
                 <form action="#" onSubmit={(e) => handleForm(e)}>
                     <div className="grid gap-4 sm:grid-cols-2 sm:gap-6">
                         <div className="w-full">
@@ -91,6 +107,7 @@ const StudentForm = () => {
                                    onChange={(e) => handleFormData(e)}
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                    placeholder="John" required=""
+                                   value={formData.firstName}
                             />
                         </div>
                         <div className="w-full">
@@ -102,12 +119,14 @@ const StudentForm = () => {
                                    onChange={(e) => handleFormData(e)}
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                    placeholder="Doe" required=""
+                                   value={formData.lastName}
                             />
                         </div>
                         <div>
                             <label htmlFor="gender"
                                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Gender</label>
                             <select id="gender" name="gender"
+                                    value={formData.gender}
                                     onChange={(e) => handleFormData(e)}
                                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                                 <option>Select gender</option>
@@ -123,6 +142,7 @@ const StudentForm = () => {
                             <input type={"date"} name={"dateOfBirth"} id={"dob"}
                                    onChange={(e) => handleFormData(e)}
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                   value={formData.dateOfBirth}
                             />
                         </div>
                         <div className="w-full">
@@ -134,6 +154,7 @@ const StudentForm = () => {
                                    onChange={(e) => handleFormData(e)}
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                    placeholder="eg. Bangladeshi" required=""
+                                   value={formData.nationality}
                             />
                         </div>
                         <div className="w-full">
@@ -145,6 +166,7 @@ const StudentForm = () => {
                                    onChange={(e) => handleFormData(e)}
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                    placeholder="Dhaka 1200" required=""
+                                   value={formData.address}
                             />
                         </div>
                         <div className="w-full">
@@ -156,6 +178,7 @@ const StudentForm = () => {
                                    onChange={(e) => handleFormData(e)}
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                    placeholder="example@email.com" required=""
+                                   value={formData.email}
                             />
                         </div>
                         <div className="w-full">
@@ -167,6 +190,7 @@ const StudentForm = () => {
                                    onChange={(e) => handleFormData(e)}
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                                    placeholder="(+880) 123456789" required=""
+                                   value={formData.phone}
                             />
                         </div>
 
@@ -178,6 +202,7 @@ const StudentForm = () => {
                             <input type={"date"} name={"admissionDate"} id={"admissionDate"}
                                    onChange={(e) => handleFormData(e)}
                                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                   value={formData.admissionDate}
                             />
                         </div>
 
@@ -216,7 +241,7 @@ const StudentForm = () => {
                     </div>
                     <button type="submit"
                             className="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
-                        Add Student
+                        Update Student
                     </button>
                 </form>
             </div>
@@ -224,4 +249,4 @@ const StudentForm = () => {
     );
 };
 
-export default StudentForm;
+export default StudentUpdateForm;

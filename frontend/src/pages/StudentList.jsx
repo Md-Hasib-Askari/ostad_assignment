@@ -47,7 +47,7 @@ const StudentList = () => {
     }
 
     const handleUpdate = (student) => {
-        navigate(`/addStudent`, {state: student})
+        navigate(`/updateStudent`, {state: student})
     }
 
     return (

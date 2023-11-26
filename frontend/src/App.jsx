@@ -1,7 +1,7 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import StudentList from "./pages/StudentList.jsx";
 import Navbar from "./components/Navbar.jsx";
-import StudentForm from "./pages/StudentForm.jsx";
+import StudentUpdateForm from "./pages/StudentUpdateForm.jsx";
 import Footer from "./components/Footer.jsx";
 
 function App() {
@@ -11,7 +11,8 @@ function App() {
           <Navbar />
           <Routes>
               <Route path='/' element={< StudentList/>} />
-              <Route path='/addStudent' element={< StudentForm/>} />
+              <Route path='/addStudent' element={< StudentUpdateForm/>} />
+              <Route path='/updateStudent' element={< StudentUpdateForm/>} />
           </Routes>
           <Footer />
       </BrowserRouter>

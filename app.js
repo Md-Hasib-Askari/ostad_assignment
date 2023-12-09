@@ -16,7 +16,7 @@ app.use(cors());
 app.use(helmet());
 app.use(hpp({checkBody: true, checkQuery: true}));
 
-mongoose.connect('mongodb://127.0.0.1:27017/studentCRUD',
+mongoose.connect('mongodb://127.0.0.1:27017/shop',
     {useNewUrlParser: true, useUnifiedTopology: true});
 
 app.use('/api/v1/cart/', cartRoute);

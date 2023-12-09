@@ -14,20 +14,17 @@
 ### Prerequisites
 
 1. Node JS
-2. Express JS
-3. POSTMAN
-4. MongoDB
-
+2. POSTMAN
+3. MongoDB
 
 ### Installation
 
 ```bash
 # Clone the repository
-
+<a>https://github.com/Md-Hasib-Askari/ostad_assignment/tree/module17</a>
 
 # Install dependencies
 npm install
 
-
 # API Endpoints
-<a>https://documenter.getpostman.com/view/29680428/2s9YkgERfb</a>
+https://documenter.getpostman.com/view/29680428/2s9YkgERfb</a>

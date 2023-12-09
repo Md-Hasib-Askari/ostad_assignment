@@ -21,10 +21,10 @@
 
 ```bash
 # Clone the repository
-<a>https://github.com/Md-Hasib-Askari/ostad_assignment/tree/module17</a>
+https://github.com/Md-Hasib-Askari/ostad_assignment/tree/module17
 
 # Install dependencies
 npm install
 
 # API Endpoints
-https://documenter.getpostman.com/view/29680428/2s9YkgERfb</a>
+https://documenter.getpostman.com/view/29680428/2s9YkgERfb

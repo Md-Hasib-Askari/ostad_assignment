@@ -1,2 +1,6 @@
 # Live Link
-[Live Link](https://md-hasib-askari.github.io/ostad_assignment/)
+
+https://ostad-assignment-bwi8.vercel.app/product
+
+https://md-hasib-askari.github.io/ostad_assignment/
+

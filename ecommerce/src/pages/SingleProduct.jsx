@@ -8,7 +8,7 @@ export const SingleProduct = () => {
     return (
         <>
             <Header />
-            <Heading />
+            <Heading pageTitle="Product" />
             <ProductDetails />
             <RelatedProducts />
             <Footer />

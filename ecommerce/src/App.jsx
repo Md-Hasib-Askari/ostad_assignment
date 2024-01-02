@@ -7,21 +7,24 @@ import {ThankYou} from "./pages/ThankYou.jsx";
 import {AuthPage} from "./pages/AuthPage.jsx";
 import {Cart} from "./pages/Cart.jsx";
 import {Checkout} from "./pages/Checkout.jsx";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
 
   return (
-    <>
-        {/*<Home />*/}
-        {/*<SingleProduct />*/}
-        {/*<Error404 />*/}
-        {/*<FAQ />*/}
-        {/*<Contact />*/}
-        {/*<ThankYou />*/}
-        {/*<AuthPage />*/}
-        {/*<Cart />*/}
-        <Checkout />
-    </>
+    <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product" element={<SingleProduct />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/thankyou" element={<ThankYou />} />
+            <Route path="/auth" element={<AuthPage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/*" element={<Error404 />} />
+        </Routes>
+    </BrowserRouter>
   )
 }
 

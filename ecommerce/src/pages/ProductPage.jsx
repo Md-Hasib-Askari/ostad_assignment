@@ -1,14 +1,14 @@
 import { Header } from "../components/Header.jsx";
 import { Footer } from "../components/Footer.jsx";
 import { Heading } from "../components/SingleProduct/Heading.jsx";
-import { ContactForm } from "../components/Contact/ContactForm.jsx";
+import { ProductList } from "../components/ProductList.jsx";
 
-export const Contact = () => {
+export const ProductPage = () => {
   return (
     <>
       <Header />
-      <Heading pageTitle="Contact Us" />
-      <ContactForm />
+      <Heading pageTitle={"Product Page"} />
+      <ProductList />
       <Footer />
     </>
   );

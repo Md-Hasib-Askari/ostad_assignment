@@ -9,7 +9,10 @@ export const Heading = ({ pageTitle }) => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 py-40" style={divStyle}>
+    <div
+      className="flex flex-col items-center gap-4 py-20 lg:py-40"
+      style={divStyle}
+    >
       <h3 className="text-5xl font-medium">{pageTitle}</h3>
       <nav className="flex justify-between" aria-label="Breadcrumb">
         <ol className="inline-flex items-center mb-3 sm:mb-0">

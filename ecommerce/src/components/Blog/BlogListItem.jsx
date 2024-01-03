@@ -1,7 +1,7 @@
 export const BlogListItem = ({ image, user, title, description, date }) => {
   return (
     <div className="col-12 mb-50px">
-      <div className="p-6 flex gap-5 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className="p-6 flex flex-col sm:flex-row gap-5 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
         <div className="blog-image">
           <a href="blog-single-left-sidebar.html">
             <img src={image} className="img-responsive w-100" alt="" />

@@ -8,7 +8,7 @@ export const FAQ = () => {
     <div>
       <Header />
       <Heading pageTitle="FAQs" />
-      <div className="flex flex-col gap-10 mx-auto max-w-screen-xl py-20">
+      <div className="flex flex-col gap-10 mx-auto max-w-screen-xl px-5 xl:px-0 py-20">
         <h1 className="text-3xl">
           Below are frequently asked questions, you may find the answer for
           yourself{" "}

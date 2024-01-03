@@ -1,6 +1,18 @@
 export const OrderDetails = () => {
+
+  function showPayment(e) {
+    const payment = ["my-account-1", "my-account-2", "my-account-3"];
+    payment.forEach((item) => {
+      if (e.target.value === item) {
+        document.getElementById(item).classList.remove("hidden");
+      } else {
+        document.getElementById(item).classList.add("hidden");
+      }
+    });
+  }
+
   return (
-    <div className="max-w-lg mt-md-30px mt-lm-30px ">
+    <div className="w-full md:w-1/2 max-w-lg mt-5">
       <div className="flex flex-col gap-5">
         <h3 className="text-2xl font-medium">Your order</h3>
         <div className="flex flex-col gap-5 bg-gray-200 p-10">
@@ -44,7 +56,8 @@ export const OrderDetails = () => {
             <div className="payment-accordion element-mrg">
               <div id="faq" className="panel-group">
                 <div className="panel panel-default single-my-account m-0">
-                  <div className="panel-heading my-account-title">
+                  <div className="flex gap-3">
+                    <input type="radio" name="payment" value="my-account-1" onChange={(e) => showPayment(e)} />
                     <h4 className="font-medium">
                       <a
                         data-bs-toggle="collapse"
@@ -58,10 +71,10 @@ export const OrderDetails = () => {
                   </div>
                   <div
                     id="my-account-1"
-                    className="panel-collapse collapse show"
+                    className="hidden"
                     data-bs-parent="#faq"
                   >
-                    <div className="panel-body">
+                    <div className="px-5 py-2">
                       <p>
                         Please send a check to Store Name, Store Street, Store
                         Town, Store State / County, Store Postcode.
@@ -70,7 +83,8 @@ export const OrderDetails = () => {
                   </div>
                 </div>
                 <div className="panel panel-default single-my-account m-0">
-                  <div className="panel-heading my-account-title">
+                  <div className="flex gap-3">
+                    <input type="radio" name="payment" value="my-account-2" onChange={(e) => showPayment(e)} />
                     <h4 className="font-medium">
                       <a
                         data-bs-toggle="collapse"
@@ -84,10 +98,10 @@ export const OrderDetails = () => {
                   </div>
                   <div
                     id="my-account-2"
-                    className="panel-collapse collapse"
+                    className="hidden"
                     data-bs-parent="#faq"
                   >
-                    <div className="panel-body">
+                    <div className="px-5 py-2">
                       <p>
                         Please send a check to Store Name, Store Street, Store
                         Town, Store State / County, Store Postcode.
@@ -96,7 +110,8 @@ export const OrderDetails = () => {
                   </div>
                 </div>
                 <div className="panel panel-default single-my-account m-0">
-                  <div className="panel-heading my-account-title">
+                  <div className="flex gap-3">
+                    <input type="radio" name="payment" value="my-account-3" onChange={(e) => showPayment(e)} />
                     <h4 className="font-medium">
                       <a data-bs-toggle="collapse" href="#my-account-3">
                         Cash on delivery
@@ -105,10 +120,10 @@ export const OrderDetails = () => {
                   </div>
                   <div
                     id="my-account-3"
-                    className="panel-collapse collapse"
+                    className="hidden"
                     data-bs-parent="#faq"
                   >
-                    <div className="panel-body">
+                    <div className="px-5 py-2">
                       <p>
                         Please send a check to Store Name, Store Street, Store
                         Town, Store State / County, Store Postcode.

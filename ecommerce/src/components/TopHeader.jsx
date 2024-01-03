@@ -7,9 +7,7 @@ import { HiMenu } from "react-icons/hi";
 export const TopHeader = () => {
   function showMenu() {
     const menu = document.getElementById("mobile-menu-2");
-    const backdrop = document.getElementById("offcanvas-backdrop");
     menu.classList.toggle("hidden");
-    backdrop.classList.add("opacity-100");
   }
 
   return (
@@ -32,7 +30,7 @@ export const TopHeader = () => {
             01
           </div>
         </Link>
-        <button onClick={() => showMenu()}>
+        <button onClick={() => showMenu()} className="lg:hidden">
           <HiMenu className="size-8 text-white" />
         </button>
       </div>

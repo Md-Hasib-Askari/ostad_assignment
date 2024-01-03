@@ -1,12 +1,7 @@
 import { ProductCard } from "./ProductCard.jsx";
 
 export const ProductArea = () => {
-  const productTypes = [
-    "New Arrivals",
-    "Top Rated",
-    "Featured",
-    "Contacts",
-  ];
+  const productTypes = ["New Arrivals", "Top Rated", "Featured", "Contacts"];
 
   function changeView(productType) {
     switch (productType) {
@@ -52,26 +47,24 @@ export const ProductArea = () => {
           data-tabs-toggle="#default-tab-content"
           role="tablist"
         >
-          {
-            productTypes.map((productType, index) => (
-
-                <li className="me-2" role="presentation" key={index}>
-                  <button
-                    className="inline-block p-4 border-b-2 rounded-t-lg"
-                    id="profile-tab"
-                    data-tabs-target="#profile"
-                    type="button"
-                    role="tab"
-                    aria-controls="profile"
-                    aria-selected="false"
-                    onClick={() => changeView(productType.toLowerCase().replace(/\s/g, '')) }
-                  >
-                    {productType}
-                  </button>
-                </li>
-
-            ))
-          }
+          {productTypes.map((productType, index) => (
+            <li className="me-2" role="presentation" key={index}>
+              <button
+                className="inline-block p-4 border-b-2 rounded-t-lg"
+                id="profile-tab"
+                data-tabs-target="#profile"
+                type="button"
+                role="tab"
+                aria-controls="profile"
+                aria-selected="false"
+                onClick={() =>
+                  changeView(productType.toLowerCase().replace(/\s/g, ""))
+                }
+              >
+                {productType}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
       <div id="default-tab-content">

@@ -15,7 +15,8 @@ import { ProductPage } from "./pages/ProductPage.jsx";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/ostad_assignment">
+    {/*<BrowserRouter>*/}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<SingleProduct />} />

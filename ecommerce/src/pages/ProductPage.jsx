@@ -7,7 +7,7 @@ export const ProductPage = () => {
   return (
     <>
       <Header />
-      <Heading pageTitle={"Product Page"} />
+      <Heading pageTitle={"All Products"} />
       <ProductList />
       <Footer />
     </>

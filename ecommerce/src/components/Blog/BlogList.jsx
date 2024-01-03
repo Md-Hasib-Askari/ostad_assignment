@@ -56,7 +56,7 @@ export const BlogList = () => {
   ];
 
   return (
-    <div className="max-w-screen-xl justify-center mx-auto py-20">
+    <div className="max-w-screen-xl justify-center mx-auto py-20 px-5 xl:p-0">
       <div className="flex flex-col">
         <div className="max-w-2xl ms-auto me-auto">
           <div className="flex flex-col gap-5">

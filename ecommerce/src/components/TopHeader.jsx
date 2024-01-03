@@ -2,10 +2,18 @@ import logo from "../assets/images/logo.webp";
 import { SearchBar } from "./SearchBar.jsx";
 import { BsCart, BsHeart } from "react-icons/bs";
 import { Link, NavLink } from "react-router-dom";
+import { HiMenu } from "react-icons/hi";
 
 export const TopHeader = () => {
+  function showMenu() {
+    const menu = document.getElementById("mobile-menu-2");
+    const backdrop = document.getElementById("offcanvas-backdrop");
+    menu.classList.toggle("hidden");
+    backdrop.classList.add("opacity-100");
+  }
+
   return (
-    <div className="flex justify-between">
+    <div className="flex md:flex-row gap-5 md:gap-0 flex-col items-center justify-between">
       <NavLink to="/" className="flex items-center">
         <img src={logo} className="mr-3 h-6 sm:h-9" alt="" />
       </NavLink>
@@ -24,6 +32,9 @@ export const TopHeader = () => {
             01
           </div>
         </Link>
+        <button onClick={() => showMenu()}>
+          <HiMenu className="size-8 text-white" />
+        </button>
       </div>
     </div>
   );

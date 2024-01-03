@@ -1,6 +1,6 @@
 export const SearchBar = () => {
   return (
-    <form className="w-1/2">
+    <form className="w-full md:w-1/2">
       <label
         htmlFor="default-search"
         className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"

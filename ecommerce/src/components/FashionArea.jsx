@@ -10,11 +10,11 @@ export const FashionArea = () => {
 
   return (
     <div
-      className="flex flex-col justify-center align-items-center h-100"
+      className="flex flex-col justify-center align-items-center h-100 bg- bg-center bg-no-repeat"
       style={divStyle}
     >
-      <div className="flex flex-col max-w-screen-xl mx-auto gap-12 text-center">
-        <h2 className="text-5xl font-bold text-white leading-normal">
+      <div className="flex flex-col items-center max-w-screen-xl mx-auto gap-12 text-center">
+        <h2 className="text-2xl md:text-5xl font-bold text-white leading-normal">
           <span className="font-normal">Smart Fashion</span>
           <br />
           With Smart Devices{" "}

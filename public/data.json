@@ -1,0 +1,222 @@
+[
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3521c"
+    },
+    "product": "Laptop",
+    "quantity": 3,
+    "price": 1200,
+    "date": {
+      "$date": "2023-09-01T10:15:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3521d"
+    },
+    "product": "Smartphone",
+    "quantity": 2,
+    "price": 800,
+    "date": {
+      "$date": "2023-09-02T15:30:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3521e"
+    },
+    "product": "Headphones",
+    "quantity": 5,
+    "price": 50,
+    "date": {
+      "$date": "2023-09-03T08:45:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3521f"
+    },
+    "product": "Tablet",
+    "quantity": 1,
+    "price": 500,
+    "date": {
+      "$date": "2023-09-04T12:00:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35220"
+    },
+    "product": "Camera",
+    "quantity": 4,
+    "price": 300,
+    "date": {
+      "$date": "2023-09-05T17:20:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35221"
+    },
+    "product": "Wireless Mouse",
+    "quantity": 10,
+    "price": 20,
+    "date": {
+      "$date": "2023-09-06T09:30:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35222"
+    },
+    "product": "External Hard Drive",
+    "quantity": 2,
+    "price": 100,
+    "date": {
+      "$date": "2023-09-07T14:45:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35223"
+    },
+    "product": "Printer",
+    "quantity": 1,
+    "price": 150,
+    "date": {
+      "$date": "2023-09-08T11:10:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35224"
+    },
+    "product": "Monitor",
+    "quantity": 2,
+    "price": 250,
+    "date": {
+      "$date": "2023-09-09T16:55:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35225"
+    },
+    "product": "Gaming Console",
+    "quantity": 1,
+    "price": 400,
+    "date": {
+      "$date": "2023-09-10T13:25:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35226"
+    },
+    "product": "Keyboard",
+    "quantity": 3,
+    "price": 30,
+    "date": {
+      "$date": "2023-09-11T18:40:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35227"
+    },
+    "product": "USB Flash Drive",
+    "quantity": 8,
+    "price": 15,
+    "date": {
+      "$date": "2023-09-12T10:05:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35228"
+    },
+    "product": "Wireless Keyboard",
+    "quantity": 2,
+    "price": 40,
+    "date": {
+      "$date": "2023-09-13T15:15:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c35229"
+    },
+    "product": "Webcam",
+    "quantity": 1,
+    "price": 60,
+    "date": {
+      "$date": "2023-09-14T12:30:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3522a"
+    },
+    "product": "Graphic Tablet",
+    "quantity": 2,
+    "price": 200,
+    "date": {
+      "$date": "2023-09-15T17:50:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3522b"
+    },
+    "product": "Wireless Earbuds",
+    "quantity": 3,
+    "price": 80,
+    "date": {
+      "$date": "2023-09-16T09:55:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3522c"
+    },
+    "product": "Microphone",
+    "quantity": 1,
+    "price": 70,
+    "date": {
+      "$date": "2023-09-17T14:20:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3522d"
+    },
+    "product": "Desk Chair",
+    "quantity": 2,
+    "price": 150,
+    "date": {
+      "$date": "2023-09-18T11:45:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3522e"
+    },
+    "product": "Projector",
+    "quantity": 1,
+    "price": 300,
+    "date": {
+      "$date": "2023-09-19T16:10:00Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "60d3f7b968417d1537c3522f"
+    },
+    "product": "Office Chair",
+    "quantity": 4,
+    "price": 120,
+    "date": {
+      "$date": "2023-09-20T13:35:00Z"
+    }
+  }
+]

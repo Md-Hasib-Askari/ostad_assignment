@@ -3,10 +3,10 @@ export const MONGODB_CONNECTION = "mongodb+srv://rnadoha:R01nHk1uISQofic2@final.
 export const JWT_SECRET = "123-XYZ-ABC";
 export const JWT_EXPIRATION_TIME = "30d";
 
-export const EMAIL_HOST = "";
-export const EMAIL_PORT = "";
-export const EMAIL_USER = "";
-export const EMAIL_PASSWORD = "";
+export const EMAIL_HOST = "smtp.gmail.com";
+export const EMAIL_PORT = "465";
+export const EMAIL_USER = "rnadoha@gmail.com";
+export const EMAIL_PASSWORD = "cnfavbgbrssrxwhl";
 
 export const MAX_JSON_SIZE = "50mb";
 export const MAX_URL_ENCODED_SIZE = "50mb";

@@ -45,8 +45,8 @@ app.use(express.static('client/dist'));
 
 
 // Serve React front end for all routes not handled by the API
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve('client', 'dist', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//     res.sendFile(path.resolve('client', 'dist', 'index.html'));
+// });
 
 export default app;

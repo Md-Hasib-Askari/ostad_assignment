@@ -2,10 +2,11 @@ import nodemailer from 'nodemailer';
 import {EMAIL_HOST, EMAIL_PASSWORD, EMAIL_PORT, EMAIL_USER} from "./Config.js";
 
 const EmailSend = async (EmailTo, EmailText, EmailSubject) => {
+    console.log(EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASSWORD)
     const transporter = nodemailer.createTransport({
         host: EMAIL_HOST,
         port:EMAIL_PORT,
-        secure: false,
+        secure: true,
         auth: {
             user: EMAIL_USER,
             pass: EMAIL_PASSWORD,
@@ -21,6 +22,7 @@ const EmailSend = async (EmailTo, EmailText, EmailSubject) => {
         subject: EmailSubject,
         text: EmailText
     };
+    console.log(mailOptions)
 
     try {
         return await transporter.sendMail(mailOptions);

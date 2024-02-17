@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import {EncodeToken} from "../utility/TokenHelper.js";
+import EmailSend from "../utility/EmailHelper.js";
 
 export const register = async (req, res) => {
   const { name, email, phone, password } = req.body;
@@ -44,6 +45,9 @@ export const login = async (req, res) => {
         if (!user) {
             return res.status(400).json({message: "Invalid credentials"});
         }
+        if (user.status !== "active") {
+            return res.status(400).json({message: "User is not active"});
+        }
         bcrypt.compare(password, user.password, (err, result) => {
             if (err) {
                 return res.status(500).json({message: err.message});
@@ -52,6 +56,7 @@ export const login = async (req, res) => {
                 return res.status(400).json({message: "Invalid credentials"});
             }
             const token = EncodeToken(email, user._id);
+            res.setHeader('Authorization', token);
             return res.status(200).json({token, message: "User logged in successfully"});
         });
     } catch (err) {
@@ -60,7 +65,7 @@ export const login = async (req, res) => {
 }
 
 export const generateOtp = async (req, res) => {
-    const {email} = req.body;
+    const email = req.params.email;
     if (!email) {
         return res.status(400).json({message: "Email is required"});
     }
@@ -68,8 +73,14 @@ export const generateOtp = async (req, res) => {
         const user = await User.findOne({email});
         if (!user) {
             return res.status(400).json({message: "User does not exist"});
+        } else if (user.status === "active") {
+            return res.status(400).json({message: "Email is already verified"});
         }
-        user.otp = Math.floor(100000 + Math.random() * 900000);
+        const generatedOTP = Math.floor(100000 + Math.random() * 900000);
+        user.otp = generatedOTP;
+        const EmailText = `Your OTP is ${generatedOTP}`;
+        const EmailSubject = "OTP for Email Verification";
+        await EmailSend(email, EmailText, EmailSubject)
         user.save()
             .then(() => {
                 return res.status(200).json({message: "OTP sent successfully"});
@@ -83,7 +94,8 @@ export const generateOtp = async (req, res) => {
 }
 
 export const verifyOtp = async (req, res) => {
-    const {email, otp} = req.body;
+    const email = req.params.email;
+    const otp = req.params.otp;
     if (!email || !otp) {
         return res.status(400).json({message: "Email and OTP are required"});
     }
@@ -91,11 +103,13 @@ export const verifyOtp = async (req, res) => {
         const user = await User.findOne({email});
         if (!user) {
             return res.status(400).json({message: "User does not exist"});
-        }
-        if (user.otp !== otp) {
+        } else if (user.status === "active") {
+            return res.status(400).json({message: "Email is already verified"});
+        } else if (user.otp !== otp) {
             return res.status(400).json({message: "Invalid OTP"});
         }
         user.otp = null;
+        user.status = "active";
         user.save()
             .then(() => {
                 return res.status(200).json({message: "OTP verified successfully"});
@@ -119,7 +133,7 @@ export const getUser = async (req, res) => {
             return res.status(400).json({message: "User does not exist"});
         }
         const {password, otp, ...rest} = user._doc;
-        return res.status(200).json({rest});
+        return res.status(200).json(rest);
     } catch (e) {
         return res.status(500).json({message: e.message});
     }

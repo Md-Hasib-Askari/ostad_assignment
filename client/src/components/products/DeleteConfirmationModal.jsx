@@ -1,18 +1,33 @@
-export const DeleteConfirmationModal = ({ deleteRef }) => {
+import {toast} from "react-hot-toast";
+import {useProductStore} from "../../store/Product.js";
+import {deleteProduct} from "../../api/productData.js";
+
+export const DeleteConfirmationModal = ({ deleteRef, productID }) => {
+  const {products, setProducts} = useProductStore((state) => state);
   const handleClose = () => {
     deleteRef.current.classList.add("hidden");
+    deleteRef.current.classList.remove("flex");
   }
 
-  const deleteProduct = () => {
-    console.log("Product deleted");
+  const handleDelete = async () => {
+    try {
+        const response = await deleteProduct(productID);
+        if (response.status === 200) {
+            toast.success("Product deleted successfully");
+            const newProducts = products.filter((product) => product._id !== productID);
+            setProducts(newProducts);
+        }
+    } catch (e) {
+        toast.error("An error occurred while deleting the product");
+    }
     handleClose();
   }
   return (
     <div
       ref={deleteRef}
-      className={`hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full`}
+      className={`hidden backdrop-blur-md overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full`}
     >
-      <div className="relative p-4 w-full max-w-md max-h-full">
+      <div className="absolute p-4 w-full max-w-md max-h-full">
         <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
           <button
             type="button"
@@ -58,7 +73,7 @@ export const DeleteConfirmationModal = ({ deleteRef }) => {
             <button
               type="button"
               className="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center"
-              onClick={deleteProduct}
+              onClick={handleDelete}
             >
               Yes, I'm sure
             </button>

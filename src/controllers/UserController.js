@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
-import {EncodeToken} from "../utility/TokenHelper.js";
+import {DecodeToken, EncodeToken} from "../utility/TokenHelper.js";
 import EmailSend from "../utility/EmailHelper.js";
 
 export const register = async (req, res) => {
@@ -24,7 +24,7 @@ export const register = async (req, res) => {
         .then(() => {
           return res
             .status(201)
-            .json({ message: "User registered successfully" });
+            .json({ message: "User registered successfully", data: email });
         })
         .catch((err) => {
           return res.status(500).json({ message: err.message });
@@ -56,11 +56,30 @@ export const login = async (req, res) => {
                 return res.status(400).json({message: "Invalid credentials"});
             }
             const token = EncodeToken(email, user._id);
-            res.setHeader('Authorization', token);
+            res.cookie('token', token, {httpOnly: true});
             return res.status(200).json({token, message: "User logged in successfully"});
         });
     } catch (err) {
         return res.status(500).json({message: err.message});
+    }
+}
+
+export const authenticate = async (req, res) => {
+    let token = req.headers.cookie;
+    if (!token) {
+        return res.status(400).json({message: "User not authenticated"});
+    } else {
+        token = token.split("=")[1];
+    }
+    try {
+        const isAuthenticated = await DecodeToken(token);
+        if (!isAuthenticated) {
+            return res.status(400).json({message: "Unauthorized"});
+        } else {
+            return res.status(200).json({status: "success", message: "User authenticated"});
+        }
+    } catch (e) {
+        return res.status(500).json({message: e.message});
     }
 }
 
@@ -112,7 +131,7 @@ export const verifyOtp = async (req, res) => {
         user.status = "active";
         user.save()
             .then(() => {
-                return res.status(200).json({message: "OTP verified successfully"});
+                return res.status(200).json({status: "success", message: "OTP verified successfully"});
             })
             .catch((err) => {
                 return res.status(500).json({message: err.message});
@@ -120,6 +139,20 @@ export const verifyOtp = async (req, res) => {
     } catch (e) {
         return res.status(500).json({message: e.message});
     }
+}
+
+export const updateUser = async (req, res) => {
+    const {email, user_id} = req.headers;
+    try {
+        const user = await User.findOneAndUpdate({email, _id: user_id}, req.body);
+        if (!user) {
+            return res.status(400).json({message: "User does not exist"});
+        }
+        return res.status(200).json({status: "success", message: "User updated successfully"});
+    } catch (e) {
+        return res.status(500).json({message: e.message});
+    }
+
 }
 
 export const getUser = async (req, res) => {
@@ -133,7 +166,7 @@ export const getUser = async (req, res) => {
             return res.status(400).json({message: "User does not exist"});
         }
         const {password, otp, ...rest} = user._doc;
-        return res.status(200).json(rest);
+        return res.status(200).json({status: "success", data: rest});
     } catch (e) {
         return res.status(500).json({message: e.message});
     }

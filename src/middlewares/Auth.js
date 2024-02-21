@@ -2,9 +2,11 @@ import {DecodeToken} from "../utility/TokenHelper.js";
 
 export default (req, res, next) => {
     // Receive Token
-    // let token = req.headers['Authorization'];
-    let token = req.headers.cookie.split('=')[1];
-    console.log(token)
+    // let token = req.headers['authorization'];
+    let token = req.headers.cookie;
+    if (token) {
+        token = token.split('=')[1];
+    }
     // Token Decode
     let decoded = DecodeToken(token);
     // Request Header Email+UserID Add
@@ -13,7 +15,6 @@ export default (req, res, next) => {
     } else {
         let email = decoded['email'];
         let user_id = decoded['user_id'];
-        console.log(email, user_id)
         req.headers.email = email;
         req.headers.user_id = user_id;
         next();

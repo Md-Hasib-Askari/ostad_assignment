@@ -5,13 +5,12 @@ import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import hpp from 'hpp';
 import cors from 'cors';
-import path from 'path';
 import {MAX_JSON_SIZE, MAX_URL_ENCODED_SIZE, MONGODB_CONNECTION, REQUEST_LIMIT_NUMBER, REQUEST_LIMIT_TIME, WEB_CACHE} from "./src/utility/Config.js";
 
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({origin: "http://localhost:5173", credentials: true}));
 app.use(helmet());
 app.use(hpp());
 

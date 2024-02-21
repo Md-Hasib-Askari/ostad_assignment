@@ -17,6 +17,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    profileImg: {
+        type: String,
+        default: null
+    },
     status: {
         type: String,
         default: "pending"

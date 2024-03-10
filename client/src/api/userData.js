@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:4000/api";
+axios.defaults.baseURL = "https://hsb-ecom-backend.vercel.app/api";
 axios.AxiosHeaders = {
     "Content-Type": "application/json",
     "Cookie": `token=${document.cookie}`,

@@ -20,7 +20,7 @@ const App = () => {
         (async () => {
             const token = document.cookie.split('; ').find(row => row.startsWith('token='));
             if (token) {
-                const response = await axios.get('http://localhost:4000/api/user', {
+                const response = await axios.get('https://hsb-ecom-backend.vercel.app/api/user', {
                     withCredentials: true,
                     headers: {
                         'Authorization': token.split('=')[1]

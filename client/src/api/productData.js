@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.url = "http://localhost:4000/api";
+axios.defaults.url = "https://hsb-ecom-backend.vercel.app/api";
 export const getProducts = async () => {
     try {
         return await axios.get(`/products`, {

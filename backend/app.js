@@ -10,7 +10,7 @@ import {MAX_JSON_SIZE, MAX_URL_ENCODED_SIZE, MONGODB_CONNECTION, REQUEST_LIMIT_N
 const app = express();
 
 // Middleware
-app.use(cors({origin: "http://localhost:5173", credentials: true}));
+app.use(cors({origin: "https://md-hasib-askari.github.io/portfolio1", credentials: true}));
 app.use(helmet());
 app.use(hpp());
 
